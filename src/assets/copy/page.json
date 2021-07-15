@@ -1,0 +1,118 @@
+{
+  "data": [
+    {
+      "id": "main-page",
+      "type": "page",
+      "content": {
+        "displayName": "Home",
+        "slug": "/",
+        "blocks": [
+          {
+            "id": "main-page-header"
+          },
+          {
+            "id": "main-page-hero"
+          }
+        ]
+      }
+    },
+    {
+      "id": "main-page-header",
+      "type": "header",
+      "content": {
+        "header": "This is my header",
+        "copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec interdum massa. Donec sit amet turpis aliquet, pellentesque odio rhoncus, venenatis est. Proin id tortor vel justo ullamcorper ullamcorper. Vestibulum gravida mollis bibendum. Cras vel maximus eros. Cras eu vehicula orci. Donec vel consectetur nunc. Sed congue scelerisque velit, sit amet ultricies ligula ornare sit amet."
+      }
+    },
+    {
+      "id": "main-page-hero",
+      "type": "hero-block",
+      "content": {
+        "header": "This is a hero",
+        "copy": "Nam ac massa felis. Etiam in scelerisque eros, scelerisque euismod urna. Morbi id ex vel sem egestas tincidunt. Aenean cursus justo sit amet sapien accumsan, nec iaculis magna accumsan. Aliquam ac lorem eu felis auctor ornare non ut nunc. Integer non commodo odio, eu rutrum mi. Vestibulum velit metus, fringilla non metus nec, posuere sollicitudin nunc. ",
+        "image": {
+          "source": "https://cdn.pixabay.com/photo/2021/07/13/11/34/cat-6463284_960_720.jpg",
+          "alt": "This is a cat."
+        }
+      }
+    },
+    {
+      "id": "about-page",
+      "type": "page",
+      "content": {
+        "displayName": "About",
+        "slug": "/about-page",
+        "blocks": [
+          {
+            "id": "about-page-header"
+          }
+        ]
+      }
+    },
+    {
+      "id": "about-page-header",
+      "type": "header",
+      "content": {
+        "header": "This is another page",
+        "copy": "Here we have even more copy"
+      }
+    }
+  ],
+  "schema": [
+    {
+      "id": "header",
+      "fields": [
+        {
+          "id": "header",
+          "type": "short_text",
+          "required": true
+        },
+        {
+          "id": "copy",
+          "type": "long_text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "hero-block",
+      "fields": [
+        {
+          "id": "header",
+          "type": "short_text",
+          "required": true
+        },
+        {
+          "id": "copy",
+          "type": "long_text",
+          "required": true
+        },
+        {
+          "id": "hero-image",
+          "type": "image",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "page",
+      "fields": [
+        {
+          "id": "displayName",
+          "type": "short_text",
+          "required": true
+        },
+        {
+          "id": "slug",
+          "type": "short_text",
+          "required": true
+        },
+        {
+          "id": "blocks",
+          "type": "reference",
+          "multiple": true
+        }
+      ]
+    }
+  ]
+}
